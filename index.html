@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Product Showcase</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f7;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .main-display img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        /* Individual color styles */
+        .color-option.teal { background-color: #086457; }
+        .color-option.yellow { background-color: #ffc107; }
+        .color-option.orange { background-color: #ff6e40; }
+        .color-option.red { background-color: #d32f2f; }
+        .color-option.purple { background-color: #8e24aa; }
+        .color-option.blue { background-color: #1565c0; }
+        .color-option.silver { background-color: #9e9e9e; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Studio Display</h1>
+    <div class="left">
+        <div class="main-display">
+            <img id="mainImage" src="image/studio-display-main.svg" alt="SVG Image">
+        </div>
+        <div class="color-options">
+            <div class="color-option teal" onclick="changeImage('image/imac-teal.svg')"></div>
+            <div class="color-option yellow" onclick="changeImage('image/imac-yellow.svg')"></div>
+            <div class="color-option orange" onclick="changeImage('image/imac-orange.svg')"></div>
+            <div class="color-option red" onclick="changeImage('image/imac-red.svg')"></div>
+            <div class="color-option purple" onclick="changeImage('image/imac-purple.svg')"></div>
+            <div class="color-option blue" onclick="changeImage('image/imac-blue.svg')"></div>
+            <div class="color-option silver" onclick="changeImage('image/imac-silver.svg')"></div>
+        </div>
+    </div>
+    <div class="right">
+        
+    </div>
+</div>
+
+<script>
+    function changeImage(imageFile) {
+        document.getElementById('mainImage').src = imageFile;
+    }
+</script>
+
+</body>
+</html>
